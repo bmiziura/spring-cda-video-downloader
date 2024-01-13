@@ -12,7 +12,7 @@ import pl.bmiziura.cdadownloader.construction.video.domain.service.VideoService;
 public class VideoController {
     private final VideoService videoService;
 
-    @PostMapping
+    @GetMapping
     public ResponseEntity<Video> fetchVideo(@RequestParam String url) {
         return ResponseEntity.ok(videoService.fetchAndSaveVideo(url));
     }
